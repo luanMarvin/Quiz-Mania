@@ -1,0 +1,59 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 0 0;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    margin: 0 0 50px 0;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    background-image: url('/src/notepad-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    margin: 0 0 10px 0;
+    border: 3px solid rgb(0, 0, 0, 0);
+}
+
+.card h1{
+    font-family: 'Roboto', sans-serif;
+}
+
+.card:hover{
+    border: 3px solid #000;
+    cursor: pointer;
+}
+
+.tags{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tags h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    padding: 3px 20px;
+    border-radius: 8.5px;
+    margin: 0 2px;
+    background-color: var(--schema-color-blue);
+    font-weight: 400;
+}
+
+.tag-ticket{
+    width: 30px;
+    margin: 0 10px 0 0;
+}
