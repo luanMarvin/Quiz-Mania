@@ -17,11 +17,11 @@ main{
     display: flex;
     justify-content: center;
     background-image: url('/src/notepad-background.jpg');
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     height: 150px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 18px;
     background-repeat: no-repeat;
     margin: 0 0 10px 0;
     border: 3px solid rgb(0, 0, 0, 0);
