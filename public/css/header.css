@@ -25,3 +25,15 @@ header{
     font-size: 1.2rem;
     color: #000;
 }
+
+#new-quiz-main-anchor{
+    padding: 12.5px 25px;
+    text-decoration: none;
+    background-color: var(--schema-color-green);
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    margin: 0 40px 0 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
