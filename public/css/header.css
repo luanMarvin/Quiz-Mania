@@ -1,0 +1,27 @@
+header{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--schema-color-blue);
+}
+
+#logo-area{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 5px;
+}
+#main-logo{
+    width: 25px;
+    margin: 0 5px 0 40px;
+    position: relative;
+    top: 5px;
+}
+
+#quiz-mania-main-anchor{
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+    font-size: 1.2rem;
+    color: #000;
+}
