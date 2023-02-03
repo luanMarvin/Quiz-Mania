@@ -1,16 +1,12 @@
 const router = require("express").Router();
+const QuizController = require('../controllers')
 
-router.get("/", (req, res) => {
-    res.render("../views/index", {
-        title: "Quiz Mania - Home"
-    })
-})
+//GET
+router.get("/", QuizController.getHome);
+router.get("/register-quiz", QuizController.getRegisterQuiz);
 
-router.get("/register-quiz", (req, res) => {
-    res.render("../views/register-quiz", {
-        title: "Quiz Mania - Novo Quiz"
-    })
-})
+//POST
+router.post('/register-quiz', QuizController.postQuiz)
 
 
 
