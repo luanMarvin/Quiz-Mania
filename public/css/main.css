@@ -1,11 +1,14 @@
 /*IMPORTS*/
 
-/*Fonts*/
+/*FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/*Others CSS*/
+/*PARTIALS AND SPECIALS*/
 @import url('colors.css');
 @import url('body.css');
 @import url('header.css');
+
+/*PAGES*/
 @import url('index.css');
+@import url('register-quiz.css');

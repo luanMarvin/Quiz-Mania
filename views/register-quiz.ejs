@@ -7,10 +7,19 @@
     <%- include('./partials/header.ejs') %>
     <main>
         <form action="/register-quiz" method="post">
-            <input type="text" name="quizTitle" placeholder="">
-            <input type="text" name="question">
-            <input type="text" name="correctAnswer">
+            <div class="question-container">
+                <input class="quiz-title" type="text" name="quizTitle" placeholder="">
+                <input class="question" type="text" name="question">
+                <input class="correctAnswer" type="text" name="correctAnswer">
+                <div class="wrong-answer-container">
+                    <input class="wrongAnswer" type="text">
+                    <img class="add-answer-button" src="/src/add-icon.svg" alt="add-icon">
+                </div>
+            </div>
+            <button class="new-question-button" >Adicionar pergunta</button>
+            <button class="finish-quiz-button" type="submit">Finalizar Quiz</button>
         </form>
+        <script src="/js/register-quiz.js"></script>
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
