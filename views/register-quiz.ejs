@@ -6,6 +6,11 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
+        <form action="/register-quiz" method="post">
+            <input type="text" name="quizTitle" placeholder="">
+            <input type="text" name="question">
+            <input type="text" name="correctAnswer">
+        </form>
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
