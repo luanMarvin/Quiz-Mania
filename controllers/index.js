@@ -22,6 +22,12 @@ async function getRegisterQuiz(req, res){
     })
 }
 
+async function getQuiz(req, res){
+    res.render("../views/quiz-play", {
+        title: "Quiz Mania - Responder Quiz"
+    })
+}
+
 //POST
 async function postQuiz(req, res){
     const {
