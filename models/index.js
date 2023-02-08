@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const quizSchema = new mongoose.Schema({
     quizTitle: String,
-    questions: Object,
-    tags: Array
+    quizTag: String,
+    questions: Object
 })
 
 const QuizModel = mongoose.model('quizes', quizSchema);
