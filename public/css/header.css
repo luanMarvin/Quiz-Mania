@@ -13,7 +13,7 @@ header{
     bottom: 5px;
 }
 #main-logo{
-    width: 25px;
+    width: 20px;
     margin: 0 5px 0 40px;
     position: relative;
     top: 5px;
@@ -22,7 +22,7 @@ header{
 #quiz-mania-main-anchor{
     text-decoration: none;
     font-family: 'Itim', cursive;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #000;
 }
 

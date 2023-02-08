@@ -8,16 +8,22 @@
     <main>
         <form action="/register-quiz" method="post">
             <div class="question-container">
+                <h1 class="title-quiz-title">Titulo do Quiz</h1>
                 <input class="quiz-title" type="text" name="quizTitle" placeholder="">
+                <h2 class="question-title">Pergunta</h2>
                 <input class="question" type="text" name="question">
+                <h3 class="correct-answer-title">Resposta Correta</h3>
                 <input class="correctAnswer" type="text" name="correctAnswer">
+                <h3 class="wrong-answer-title">Respostas Incorretas</h3>
                 <div class="wrong-answer-container">
                     <input class="wrongAnswer" type="text">
                     <img class="add-answer-button" src="/src/add-icon.svg" alt="add-icon">
                 </div>
             </div>
-            <button class="new-question-button" >Adicionar pergunta</button>
-            <button class="finish-quiz-button" type="submit">Finalizar Quiz</button>
+            <div class="buttons-container">
+                <button class="new-question-button" >Adicionar pergunta</button>
+                <button class="finish-quiz-button" type="submit">Finalizar Quiz</button>
+            </div>
         </form>
         <script src="/js/register-quiz.js"></script>
     </main>
