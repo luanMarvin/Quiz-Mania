@@ -7,7 +7,7 @@ main{
 
 .card-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     width: 60vw;
     margin: 0 0 50px 0;
@@ -41,6 +41,7 @@ main{
     width: 100%;
     justify-content: flex-end;
     align-items: center;
+    margin: 0 0 45px 0;
 }
 
 .tags h2{
@@ -54,6 +55,6 @@ main{
 }
 
 .tag-ticket{
-    width: 30px;
-    margin: 0 10px 0 0;
+    width: 20px;
+    margin: 0 5px 0 0;
 }

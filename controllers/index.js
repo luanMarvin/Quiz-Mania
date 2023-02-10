@@ -32,11 +32,13 @@ async function getQuiz(req, res){
 async function postQuiz(req, res){
     const {
         quizTitle,
-        questions
+        tags,
+        questions,
     } = req.body;
 
     const registerQuiz = new QuizModel({
         quizTitle,
+        tags,
         questions
     })
 

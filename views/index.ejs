@@ -8,13 +8,16 @@
     <main>
         <div class="card-container">
             <% data.forEach(element => { %>
-            <div class="card">
-                <h1><%= element.quizTitle %></h1>
-            </div>
-            <div class="tags">
-                <img class="tag-ticket" src="/src/tag-ticket.svg" alt="tags-ticket">
-                <h2><%= element.tag %></h2>
-            </div>
+                <div class="tags">
+                    <img class="tag-ticket" src="/src/tag-ticket.svg" alt="tags-ticket">
+                    <% element.tags.forEach(index => { %>
+                        <h2><%= index %></h2>
+                    <% }) %>
+                </div>
+
+                <div class="card">
+                    <h1><%= element.quizTitle %></h1>
+                </div>
             <% }) %>
         </div>
     </main>
