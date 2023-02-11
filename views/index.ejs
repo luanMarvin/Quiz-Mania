@@ -15,10 +15,11 @@
                     <% }) %>
                 </div>
 
-                <div class="card">
+                <div id="<%= element._id %>" onclick="accessQuizPage();" class="card">
                     <h1><%= element.quizTitle %></h1>
                 </div>
             <% }) %>
+            <script src="/js/index.js"></script>
         </div>
     </main>
     <%- include('./partials/footer.ejs') %>
