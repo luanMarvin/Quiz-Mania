@@ -15,7 +15,7 @@
                     <% }) %>
                 </div>
 
-                <div id="<%= element._id %>" onclick="accessQuizPage();" class="card">
+                <div id="<%= element._id %>" onclick="accessQuizPage(this.Element.name);" class="card">
                     <h1><%= element.quizTitle %></h1>
                 </div>
             <% }) %>
