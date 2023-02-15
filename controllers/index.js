@@ -1,3 +1,4 @@
+const { collection } = require('../models');
 const QuizModel = require('../models');
 const MongoClient = require('mongodb').MongoClient;
 const mongoUrl = "mongodb://localhost:27017/";
@@ -5,7 +6,7 @@ const mongoUrl = "mongodb://localhost:27017/";
 //GET
 async function getHome(req, res){
     MongoClient.connect(mongoUrl, function(err, db){
-        var dbo = db.db("quiz-mania");
+        let dbo = db.db("quiz-mania");
         dbo.collection("quizes").find({}).toArray(function(err, result) {
             db.close();
             res.render("../views/index", {
@@ -22,14 +23,24 @@ async function getRegisterQuiz(req, res){
     })
 }
 
-async function quizPlay(req, res)
-    { const { id } = req.params
-    const obj = id ? { _id: id } : null
-    const quiz = await QuizModel.find(obj)
-    res.render("../views/quiz-play", {
-        title: "Quiz Mania - Responder Quiz",
-        data: quiz
-    })
+async function getQuiz(req, res){
+    const id = req.params.id || null;
+
+    try {
+        result = await QuizModel.findById(id);
+    } catch (error) {
+        result = null
+    }
+    if(result){
+        res.render("../views/quiz-play",{
+            title: `Quiz: ${result.quizTitle}`,
+            data: result
+        }) 
+    } else {
+        res.render("../views/quiz-play",{
+            title: "Quiz Não encontrado",
+        }) 
+    }
 }
 
 
@@ -54,6 +65,6 @@ async function postQuiz(req, res){
 module.exports = {
     getHome,
     getRegisterQuiz,
-    quizPlay,
+    getQuiz,
     postQuiz
 };
