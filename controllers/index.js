@@ -22,11 +22,16 @@ async function getRegisterQuiz(req, res){
     })
 }
 
-async function getQuiz(req, res){
+async function quizPlay(req, res)
+    { const { id } = req.params
+    const obj = id ? { _id: id } : null
+    const quiz = await QuizModel.find(obj)
     res.render("../views/quiz-play", {
-        title: "Quiz Mania - Responder Quiz"
+        title: "Quiz Mania - Responder Quiz",
+        data: quiz
     })
 }
+
 
 //POST
 async function postQuiz(req, res){
@@ -49,5 +54,6 @@ async function postQuiz(req, res){
 module.exports = {
     getHome,
     getRegisterQuiz,
+    quizPlay,
     postQuiz
 };

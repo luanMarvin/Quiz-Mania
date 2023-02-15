@@ -14,10 +14,11 @@
                         <h2><%= index %></h2>
                     <% }) %>
                 </div>
-
-                <div id="<%= element._id %>" onclick="accessQuizPage(this.Element.name);" class="card">
-                    <h1><%= element.quizTitle %></h1>
-                </div>
+                <a class="card" href="127.0.0.1:8080/quiz-play/<%= element._id %>">
+                    <div id="<%= element._id %>" class="card-inside">
+                        <h1><%= element.quizTitle %></h1>
+                    </div>
+                </a>
             <% }) %>
             <script src="/js/index.js"></script>
         </div>
