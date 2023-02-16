@@ -6,7 +6,14 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        
+        <div class="quiz-infos">
+            <h1><%= data.quizTitle %></h1>
+            <div class="tags-info">
+                <% data.tags.forEach(element =>{ %>
+                    <h2><%= element %></h2>
+                <% }) %>
+            </div>
+        </div>
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
