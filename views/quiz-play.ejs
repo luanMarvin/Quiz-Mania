@@ -6,6 +6,7 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
+        <% if (data){ %>
         <div class="quiz-infos">
             <h1><%= data.quizTitle %></h1>
             <div class="tags-info">
@@ -14,6 +15,7 @@
                 <% }) %>
             </div>
         </div>
+        <% } %>
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>

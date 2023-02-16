@@ -1,13 +1,14 @@
 const router = require("express").Router();
-const QuizController = require('../controllers')
+const GetControllers = require('../controllers/get');
+const PostControllers = require('../controllers/post');
 
 //GET
-router.get("/", QuizController.getHome);
-router.get("/register-quiz", QuizController.getRegisterQuiz);
-router.get("/quiz-play/:id?", QuizController.getQuiz)
+router.get("/", GetControllers.getHome);
+router.get("/register-quiz", GetControllers.getRegisterQuiz);
+router.get("/quiz-play/:id?", GetControllers.getQuiz);
 
 //POST
-router.post('/register-quiz', QuizController.postQuiz)
+router.post('/register-quiz', PostControllers.postQuiz);
 
 
 

@@ -7,19 +7,21 @@
     <%- include('./partials/header.ejs') %>
     <main>
         <div class="card-container">
-            <% data.forEach(element => { %>
-                <div class="tags">
-                    <img class="tag-ticket" src="/src/tag-ticket.svg" alt="tags-ticket">
-                    <% element.tags.forEach(index => { %>
-                        <h2><%= index %></h2>
-                    <% }) %>
-                </div>
-                <a class="card" href="/quiz-play/<%= element._id %>">
-                    <div id="<%= element._id %>" class="card-inside">
-                        <h1><%= element.quizTitle %></h1>
+            <% if (data){ %>
+                <% data.forEach(element => { %>
+                    <div class="tags">
+                        <img class="tag-ticket" src="/src/tag-ticket.svg" alt="tags-ticket">
+                        <% element.tags.forEach(index => { %>
+                            <h2><%= index %></h2>
+                        <% }) %>
                     </div>
-                </a>
-            <% }) %>
+                    <a class="card" href="/quiz-play/<%= element._id %>">
+                        <div id="<%= element._id %>" class="card-inside">
+                            <h1><%= element.quizTitle %></h1>
+                        </div>
+                    </a>
+                <% }) %>
+            <% } %>
             <script src="/js/index.js"></script>
         </div>
     </main>
