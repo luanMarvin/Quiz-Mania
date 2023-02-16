@@ -6,6 +6,7 @@ const PostControllers = require('../controllers/post');
 router.get("/", GetControllers.getHome);
 router.get("/register-quiz", GetControllers.getRegisterQuiz);
 router.get("/quiz-play/:id?", GetControllers.getQuiz);
+router.get('*', GetControllers.notFound);
 
 //POST
 router.post('/register-quiz', PostControllers.postQuiz);

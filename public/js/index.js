@@ -1,0 +1,7 @@
+function newQuestion(){
+
+}
+
+function newAnswer(){
+    
+}

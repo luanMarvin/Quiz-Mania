@@ -36,7 +36,7 @@ async function getQuiz(req, res){
         result = await QuizModel.findById(id);
     } catch (error) {
         result = null;
-    }
+    };
     if(result){
         res.render("../views/quiz-play",{
             title: `Quiz: ${result.quizTitle}`,
@@ -47,12 +47,18 @@ async function getQuiz(req, res){
             title: "Quiz Não encontrado",
             data: null
         });
-    }
-}
+    };
+};
 
+async function notFound(req, res){
+    res.render("../views/not-found",{
+        title: "Página não encontrada"
+    });
+};
 
 module.exports = {
     getHome,
     getRegisterQuiz,
-    getQuiz
+    getQuiz,
+    notFound
 };

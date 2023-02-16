@@ -17,11 +17,11 @@
                 <h3 class="wrong-answer-title">Respostas Incorretas</h3>
                 <div class="wrong-answer-container">
                     <input class="wrongAnswer" type="text">
-                    <img class="add-answer-button" src="/src/add-icon.svg" alt="add-icon">
+                    <button class="add-answer-button" onclick="newAnswer();">Adicionar Alternativa</button>
                 </div>
             </div>
             <div class="buttons-container">
-                <button class="new-question-button" >Adicionar pergunta</button>
+                <button class="new-question-button" onclick="newQuestion();" >Adicionar pergunta</button>
                 <button class="finish-quiz-button" type="submit">Finalizar Quiz</button>
             </div>
         </form>

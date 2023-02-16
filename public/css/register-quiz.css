@@ -16,7 +16,7 @@
     border-radius: 10px;
     margin: 0 0 40px 0;
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: var(--schema-color-black);
     text-indent: 35px;
     font-weight: 600;
     font-size: 1.2rem;
@@ -25,7 +25,7 @@
 .title-quiz-title{
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: var(--schema-color-black);
     font-size: 1.8rem;
 }
 
@@ -40,14 +40,14 @@
  border-radius: 10px;
  margin: 0 0 40px 0;
  font-family: 'Roboto', sans-serif;
- color: #000;
+ color: var(--schema-color-black);
  text-indent: 25px;
  font-size: 1rem;
 }
 
 .question-title{
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: var(--schema-color-black);
     font-size: 1.2rem;
 }
 
@@ -64,20 +64,21 @@
 
 .correct-answer-title{
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: var(--schema-color-black);
     font-size: 1.2rem;
 }
 
 .wrong-answer-container{
     display: flex;
     width: 60%;
-    justify-content: center;
     margin: 0 0 40px 0;
+    flex-direction: column;
+    align-items: center;
 }
 
 .wrong-answer-title{
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: var(--schema-color-black);
     font-size: 1.2rem;
 }
 
@@ -90,16 +91,27 @@
     background-size: 20px;
     background-repeat: no-repeat;
     border-radius: 10px;
+    margin: 0 0 20px 0;
 }
 
 .buttons-container{
     display: flex;
     justify-content: center;
+    margin: 0 0 30px 0;
 }
 
 .add-answer-button{
-    margin: 0 0 0 20px;
-    width: 25px;
+    background-color: var(--schema-color-blue);
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--schema-color-black);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0 15px;
+    cursor: pointer;
+    margin: 0 0 30px 0;
 }
 
 .new-question-button{
@@ -108,7 +120,7 @@
     border: none;
     height: 40px;
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: var(--schema-color-black);
     font-weight: 600;
     font-size: 1rem;
     padding: 0 15px;
@@ -117,12 +129,12 @@
 }
 
 .finish-quiz-button{
-    background-color: var(--schema-color-green);
+    background-color: var(--schema-color-cyan);
     border-radius: 10px;
     border: none;
     height: 40px;
     font-family: 'Roboto', sans-serif;
-    color: #000;
+    color: var(--schema-color-black);
     font-weight: 600;
     font-size: 1rem;
     padding: 0 15px;
