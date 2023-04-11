@@ -6,7 +6,7 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
-        <form action="/register-quiz" method="post">
+        <div>
             <div class="question-container">
                 <h1 class="title-quiz-title">Titulo do Quiz</h1>
                 <input class="quiz-title" type="text" name="quizTitle" placeholder="">
@@ -24,7 +24,7 @@
                 <button class="new-question-button" onclick="newQuestion();" >Adicionar pergunta</button>
                 <button class="finish-quiz-button" type="submit">Finalizar Quiz</button>
             </div>
-        </form>
+        </div>
         <script src="/js/register-quiz.js"></script>
     </main>
     <%- include('./partials/footer.ejs') %>
