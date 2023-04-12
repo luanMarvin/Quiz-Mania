@@ -5,7 +5,7 @@ const collection = 'quiz-mania';
 
 const databaseConnect = () => {
     mongoose.connect(`mongodb://127.0.0.1:${databasePort}/${collection}`);
-    const database = mongoose.connection;
+    console.log('Connected to DB');
 };
 
 module.exports =  {

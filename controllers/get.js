@@ -1,7 +1,7 @@
 const { collection } = require('../models');
 const QuizModel = require('../models');
 const MongoClient = require('mongodb').MongoClient;
-const mongoUrl = "mongodb://localhost:27017/";
+const mongoUrl = "mongodb://127.0.0.1:27017/";
 
 async function getHome(req, res){
     MongoClient.connect(mongoUrl, function(err, db){
