@@ -10,6 +10,17 @@
             <div class="question-container">
                 <h1 class="title-quiz-title">Titulo do Quiz</h1>
                 <input class="quiz-title" type="text" name="quizTitle" placeholder="">
+                <div class="single-question-container">
+                    <h2 class="question-title">Pergunta</h2>
+                    <input class="question" type="text" name="question">
+                    <h3 class="correct-answer-title">Resposta Correta</h3>
+                    <input class="correctAnswer" type="text" name="correctAnswer">
+                    <h3 class="wrong-answer-title">Respostas Incorretas</h3>
+                    <div class="wrong-answer-container">
+                        <input class="wrongAnswer" type="text">
+                        <button class="add-answer-button" onclick="newAnswer();">Adicionar Alternativa</button>
+                    </div>
+                </div>
                 <h2 class="question-title">Pergunta</h2>
                 <input class="question" type="text" name="question">
                 <h3 class="correct-answer-title">Resposta Correta</h3>
