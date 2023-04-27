@@ -7,5 +7,5 @@ function newAnswer(){
 };
 
 function verifyAndSend(){
-
+    
 };

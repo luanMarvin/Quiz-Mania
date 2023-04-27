@@ -11,6 +11,4 @@ router.get('*', GetControllers.notFound);
 //POST
 router.post('/register-quiz', PostControllers.postQuiz);
 
-
-
 module.exports = router
