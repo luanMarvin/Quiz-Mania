@@ -29,10 +29,36 @@
     font-size: 1.8rem;
 }
 
+.tags-title{
+    font-family: 'Roboto', sans-serif;
+}
+
+.tags-register{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 40px 0;
+}
+
+.tags-register .tag{
+    width: 15vw;
+    border: 3px solid var(--schema-color-blue);
+    background-image: url('/src/tag-ticket.svg');
+    background-position: 5px;
+    height: 30px;
+    background-size: 17.5px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+}
+
 .single-question-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 3px ridge #fff ;
+    border-radius: 20px;
+    padding: 0px 20px;
+    margin: 0 0 20px 0;
 }
 
 .question{
@@ -117,7 +143,7 @@
     font-size: 1rem;
     padding: 0 15px;
     cursor: pointer;
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
 }
 
 .new-question-button{
