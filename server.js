@@ -3,6 +3,7 @@ const routes = require('./routes');
 const path = require('path');
 const database = require('./database');
 const mongoose = require('mongoose');
+require('dotenv').config()
 
 //Express set's
 const app = express();
@@ -15,5 +16,5 @@ app.use('/', routes)
 mongoose.set('strictQuery', false);
 database.databaseConnect();
 
-const port = 8080;
+const port = process.env.port || 8080;
 app.listen(port, (console.log(`Application online at localhost port: ${port}`)));

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
-const databasePort = '27017';
-const collection = 'quiz-mania';
+const MongodbURL = process.env.MongodbURL
 
 const databaseConnect = () => {
-    mongoose.connect(`mongodb://127.0.0.1:${databasePort}/${collection}`);
+    mongoose.connect(`${MongodbURL}`);
     console.log('Connected to DB');
 };
 

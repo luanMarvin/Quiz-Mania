@@ -2,21 +2,59 @@
 <html lang="pt-br">
 <head>
     <%- include('./partials/head.ejs') %>
+    <style>
+        .correct {
+            background-color: green;
+            color: white;
+        }
+        .wrong {
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <%- include('./partials/header.ejs') %>
     <main>
         <% if (data){ %>
         <div class="quiz-infos">
-            <h1><%= data.quizTitle %></h1>
+            <h1><%= data.quizTitle.charAt(0).toUpperCase() + data.quizTitle.slice(1) %></h1>
             <div class="tags-info">
-                <% data.tags.forEach(element =>{ %>
-                    <h2><%= element %></h2>
+                <% data.tags.forEach(element => { %>
+                    <h2><%= element.charAt(0).toUpperCase() + element.slice(1) %></h2>
                 <% }) %>
             </div>
         </div>
+
+        <form id="quiz-form">
+            <% data.questions.forEach((question, index) => { %>
+                <div class="question-container">
+                    <h3><%= question.question.charAt(0).toUpperCase() + question.question.slice(1) %></h3>
+                    <% 
+                        const allAnswers = [question.correctAnswer, ...question.wrongAnswers];
+                        allAnswers.sort(() => Math.random() - 0.5);
+                    %>
+                    <% allAnswers.forEach(answer => { %>
+                        <div class="answer">
+                            <input type="radio" name="question-<%= index %>" value="<%= answer %>">
+                            <label><%= answer.charAt(0).toUpperCase() + answer.slice(1) %></label>
+                        </div>
+                    <% }) %>
+                </div>
+            <% }) %>
+            <button type="button" id="check-answers">Checar Respostas</button>
+        </form>
+
+        <div id="results">
+            <h3>Pontuação: <span id="score"></span></h3>
+        </div>
+
+        <script id="questions-data" type="application/json">
+            <%- JSON.stringify(data.questions) %>
+        </script>
         <% } %>
     </main>
     <%- include('./partials/footer.ejs') %>
+    <script src="/js/quiz.js"></script>
 </body>
 </html>

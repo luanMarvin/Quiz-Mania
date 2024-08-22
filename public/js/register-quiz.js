@@ -96,6 +96,7 @@ function verifyAndSend() {
     };
 
     questions.push(questionData);
+    window.location.href = "/";
   });
 
   var data = {

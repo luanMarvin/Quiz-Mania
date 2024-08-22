@@ -1,8 +1,11 @@
 .question-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 80vw;
+}
+
+#question-container{
+    align-items: center;
 }
 
 .quiz-title{
@@ -92,6 +95,7 @@
     background-size: 17.5px;
     background-repeat: no-repeat;
     border-radius: 10px;
+    text-indent: 35px;
 }
 
 .correct-answer-title{
@@ -124,6 +128,7 @@
     background-repeat: no-repeat;
     border-radius: 10px;
     margin: 0 0 20px 0;
+    text-indent: 35px;
 }
 
 .buttons-container{
@@ -171,4 +176,8 @@
     font-size: 1rem;
     padding: 0 15px;
     cursor: pointer;
+}
+
+.tag{
+    text-indent: 30px;
 }
